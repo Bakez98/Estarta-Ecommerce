@@ -1,0 +1,18 @@
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 2px white;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+a{
+    all: unset;
+}
+
+a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
