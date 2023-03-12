@@ -2,6 +2,9 @@ import React from 'react'
 import styles from "./styles.module.css";
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { AiOutlineArrowRight } from 'react-icons/ai';
+
+
 
 const NavBar = () => {
 
@@ -15,7 +18,7 @@ const NavBar = () => {
             </Link>
         </div>
         <Link to="/login">
-      <button>Login</button>
+      <button>Login<AiOutlineArrowRight size={10}/></button>
     </Link>
         {/* {isAuth? ( <Link to="/login">
       <button>Login</button>
