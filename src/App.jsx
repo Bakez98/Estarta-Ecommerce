@@ -26,6 +26,7 @@ function App() {
   const {isAuth, loading} = useSelector(state => state.authReducer)
   const nav = useNavigate();
   const dispatch= useDispatch()
+  
   useEffect(() => {
     if (isAuth)
       dispatch(validateToken()).then((responce) => {
@@ -42,7 +43,7 @@ function App() {
     <Routes>
       <Route path="/Login" element={<Login />} />
       <Route index  element={<Home />} />
-      <Route path="/Cart" element={<yarn element={<Cart/>} />} />
+      <Route path="/Cart" element={<ProtectedRoutes element={<Cart/>} />} />
       <Route path="/Products" element={<ProtectedRoutes element={<Products/>} />} />
       <Route path='*' element={<NotFound />} />
     </Routes>

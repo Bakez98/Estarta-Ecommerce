@@ -34,11 +34,12 @@ const NavBar = () => {
         </div>
 
 {!isAuth && (
-       <div>
+       <div >
        <Link to="/login">
          <button className={styles.loginBtn}>
-           Login <BsArrowRightShort size={20} />
+           Login  <BsArrowRightShort size={30} />
          </button>
+        
        </Link>
      </div>
 )

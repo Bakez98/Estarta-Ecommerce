@@ -52,8 +52,6 @@ export  function login(email) {
     }
 }
 
-
-
 export  function logout() {
     return async (dispatch) => {
 
@@ -90,7 +88,7 @@ export function validateToken() {
         })
 
         try {
-            const responce = magic.user.getIdToken();
+            const responce = await magic.user.getIdToken();
             if(responce){
                 dispatch({
                     type:AUTH_ACTIONS_CONSTANTS.AUTH_RESET_LOADING
