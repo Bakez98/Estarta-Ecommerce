@@ -16,3 +16,16 @@ a:hover{
     text-decoration: underline;
     cursor: pointer;
 }
+.logoutIcon{
+    position: relative;
+
+}
+.logoutBox{
+    position: absolute;
+    right: -4px;
+    background: #4f4b4b;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 13px;
+}

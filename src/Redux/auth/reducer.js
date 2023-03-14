@@ -1,10 +1,10 @@
 import * as AUTH_ACTIONS_CONSTANTS from "./constants"
 
 const initState = {
-    isAuth:false,
+    isAuth:!!localStorage.getItem("token") || false,
     token:null,
     loading:false,
-    user:{},
+    user:JSON.parse(localStorage.getItem("user")) || {},
     error: null,
 }
 
@@ -29,6 +29,19 @@ const initState = {
             isAuth:true,
             // user:,
             //tokem:
+        }
+        case AUTH_ACTIONS_CONSTANTS.AUTH_CLEAR:
+        return {
+            ...state,
+            loading: false,
+            isAuth : false,
+            token:"",
+            user:{},
+        }
+        case AUTH_ACTIONS_CONSTANTS.AUTH_RESET_LOADING:
+        return {
+            ...state,
+            loading: false,
         }
         default:
             return state;
