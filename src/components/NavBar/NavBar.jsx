@@ -54,7 +54,7 @@ const NavBar = () => {
             />
             {toggleBoxLogout && (
               <div className={styles.logoutBox}>
-                {user.email}
+                <div>User: {user.email} </div>
                 <a onClick={handleLogout} className={styles.logoutText}>
                   Logout
                 </a>
