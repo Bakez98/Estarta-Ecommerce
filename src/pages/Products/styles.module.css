@@ -1,0 +1,24 @@
+.CardWrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    border: ;
+}
+
+
+.CardDiscreption{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.productsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 2rem 0;
+    width: 100%;
+    justify-content: space-between;
+}

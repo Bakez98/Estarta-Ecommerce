@@ -1,0 +1,19 @@
+.CardWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.CardImg{
+    border-radius: 24px;
+    height: 200px;
+}
+
+.CardDiscreption{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}

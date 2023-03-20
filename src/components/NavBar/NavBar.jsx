@@ -1,9 +1,8 @@
 import React from 'react'
 import styles from "./styles.module.css";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
-import { AiOutlineArrowRight } from 'react-icons/ai';
-import { BsArrowRightShort } from "react-icons/bs";
+import { BsArrowRightShort , BsCart4 } from "react-icons/bs";
 import { BiUserCircle } from "react-icons/bi";
 import { useState } from 'react';
 import { logout } from '../../Redux/auth/actions';
@@ -46,8 +45,13 @@ const NavBar = () => {
 }     
    {isAuth && (
 
- <div>
-          <div className={styles.logoutIcon}>
+ <div className={styles.RightButtonsNavBarWrapper}>
+            <NavLink to="/products">Products</NavLink>
+            <Link to="/cart" className={styles.cartIcon}>
+              <BsCart4 size={25} />
+              <div className={styles.cartItemsCount}></div>
+            </Link>
+      <div className={styles.logoutIcon}>
             <BiUserCircle
               onClick={() => setToggleBoxLogout(!toggleBoxLogout)}
               size={30}
@@ -60,8 +64,11 @@ const NavBar = () => {
                 </a>
               </div>
             )}
-          </div>
-        </div>
+      </div>
+      
+  </div>
+
+  
    )}
         
     </nav>
