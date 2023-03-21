@@ -45,6 +45,11 @@ function cartReducer(state = initState, action) {
         cartItems: items.filter(Boolean),
       };
 
+    case CART_CONSTANTS.CLEAR_CART:
+      return {
+        ...state,
+        cartItems: [],
+    }
     default:
       return state;
   }

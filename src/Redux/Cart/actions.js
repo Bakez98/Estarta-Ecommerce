@@ -21,3 +21,12 @@ export function Remove_From_Cart(product) {
     }
     
 }
+
+
+export function Clear_Cart() {
+    return (dispatch) => {
+        dispatch({
+            type:CART_CONSTANTS.CLEAR_CART
+        })
+    }
+}
