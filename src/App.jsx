@@ -41,7 +41,7 @@ function App() {
     <NavBar/>
     <Suspense fallback={<div>Loading............</div>}>
     <Routes>
-      <Route path="/Login" element={<Login />} />
+      <Route path="/login" element={<Login />} />
       <Route index  element={<Home />} />
       <Route path="/Cart" element={<ProtectedRoutes element={<Cart/>} />} />
       <Route path="/Products" element={<ProtectedRoutes element={<Products/>} />} />

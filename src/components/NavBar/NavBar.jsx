@@ -10,6 +10,7 @@ const NavBar = () => {
 
   const [toggleBoxLogout, setToggleBoxLogout] = useState(false);
   const { isAuth, user } = useSelector(state =>  state.authReducer);
+  const { cartItems } = useSelector((state) => state.cartReducer);
   console.log("Console log from inside navbar",user.email)
   const dispatch = useDispatch();
   const nav = useNavigate();
@@ -49,7 +50,7 @@ const NavBar = () => {
             <NavLink to="/products">Products</NavLink>
             <Link to="/cart" className={styles.cartIcon}>
               <BsCart4 size={25} />
-              <div className={styles.cartItemsCount}></div>
+              <div className={styles.cartItemsCount}>{cartItems?.length}</div>
             </Link>
       <div className={styles.logoutIcon}>
             <BiUserCircle

@@ -84,7 +84,7 @@ export function validateToken() {
     return async (dispatch) => {
 
         dispatch({
-            tpye: AUTH_ACTIONS_CONSTANTS.AUTH_LOADING
+            type: AUTH_ACTIONS_CONSTANTS.AUTH_LOADING
         })
 
         try {

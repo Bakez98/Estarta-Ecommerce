@@ -45,3 +45,21 @@ a:hover{
     justify-content: center;
     align-items: center;
 }
+
+.cartIcon {
+    position: relative;
+}
+.cartItemsCount {
+    position: absolute;
+    background: #E91E63;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    top: -10px;
+    right: -10px;
+}

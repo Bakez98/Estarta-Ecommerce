@@ -1,7 +1,7 @@
 import * as AUTH_ACTIONS_CONSTANTS from "./constants"
 
 const initState = {
-    isAuth:!!localStorage.getItem("token") || false,
+    isAuth:!!localStorage.getItem("Token") || false,
     token:null,
     loading:false,
     user:JSON.parse(localStorage.getItem("user")) || {},

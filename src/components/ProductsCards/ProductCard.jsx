@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./styles.module.css";
 import { useDispatch } from 'react-redux';
-import  AddToCart  from '../../Redux/Cart/actions';
+import  {AddToCart}  from '../../Redux/Cart/actions';
 
 const ProductCard = ({product}) => {
 
@@ -19,8 +19,10 @@ const ProductCard = ({product}) => {
           <div> <img src={product.image_link} className={styles.CardImg} alt="Error Product Img not found" /></div>
        <div className={styles.CardDiscreption}>   
        <div>{ product.name} </div>
-       <div>{product.rating} </div>
        <div>${product.price} </div>
+       <div>{new Array(product?.rating).fill("⭐").map((star, index) => (
+          <span key={index}>{star}</span>
+        ))}</div>
        <button onClick={() => HandleAddToCart(product)}>Add to Cart</button>
        </div>
 
